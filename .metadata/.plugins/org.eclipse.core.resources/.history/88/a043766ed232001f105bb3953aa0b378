@@ -1,0 +1,55 @@
+package javaCode;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		String S = "ABCD";
+//		String rev ="";
+		
+   /*	int len= S.length();
+		
+		for(int i=len-1;i>=0;i--)
+		{
+			
+			rev=rev+ S.charAt(i);
+		}
+		
+		System.out.println("Reversed String is:"+ rev);  */
+
+		
+	// 2 using char array
+		
+//		char a[]= S.toCharArray(); 
+//		int len= a.length;
+//		
+//		for(int i=len-1;i>=0;i--)
+//		{
+//			rev=rev+ a[i];
+//		}
+//		
+//		System.out.println("Reversed String is:"+ rev);
+//		
+		
+	// 3 Using StringBuffer class
+		
+//		StringBuffer sb = new StringBuffer(S);
+//		System.out.println(sb.reverse());
+		
+		
+		String s="Abhishek Tanwar";
+		
+		String[] str= s.split(" ");
+		String rev= str[0];
+		
+	   for(int i=1 ; str.length-1;i--)
+	   {
+		   rev =rev + str[i] + " ";
+		   
+	   }
+	   
+	   System.out.println(rev);
+	}
+
+}

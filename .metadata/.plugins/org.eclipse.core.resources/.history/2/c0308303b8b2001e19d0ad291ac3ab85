@@ -1,0 +1,13 @@
+package javaCode;
+
+public class calc {
+
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		System.out.println(16*8-(2+4));
+	}
+}

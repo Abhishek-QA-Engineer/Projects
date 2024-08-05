@@ -1,0 +1,40 @@
+package javaCode;
+
+import java.util.Scanner;
+
+public class LargestOfThree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Scanner sc =new Scanner(System.in);
+		
+		System.out.println("Enter First Ṇumber");
+		int a=sc.nextInt();
+		
+		System.out.println("Enter Second Ṇumber");
+		int b=sc.nextInt();
+		
+		System.out.println("Enter Third Ṇumber");
+		int c =sc.nextInt();
+		
+	// Logic 1 >>>
+		
+		if(a>b && a>c)
+		{
+			System.out.println(a+"largest number");
+		}
+		else if(b>a && b>c)
+		{
+			System.out.println(b+"largest number");
+		}
+		else
+		{
+			System.out.println(c+"largest number");
+		}
+		
+		
+	}
+
+}

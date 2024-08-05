@@ -1,0 +1,32 @@
+package javaBasic;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
+
+public class SelIntro {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		String Name = "Abhishek";
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\hp\\Downloads\\geckodriver-v0.33.0-win-aarch64.exe");
+		
+		//WebDriver driver = new GeckoDriver();
+		WebDriver driver = new EdgeDriver();
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.findElement(By.id("inputUsername")).sendKeys(Name);
+		driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
+		driver.findElement(By.className("signInBtn")).click();
+		//driver.findElement(By.className("forgot-pwd-container")).click();
+		//driver.findElement(By.id("chkboxTwo")).click();
+		//Assert.assertEquals(driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText(),"Hello "+Name+",");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[text() ='Log Out']")).click();
+		Thread.sleep(1000);
+		driver.close();
+		
+		
+	}
+
+}

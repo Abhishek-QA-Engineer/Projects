@@ -1,0 +1,12 @@
+package javaCode;
+
+public class calc {
+
+	
+	public static void main(String[] args) {
+		
+		
+		
+		System.out.println(-6+4*(2+2));
+	}
+}

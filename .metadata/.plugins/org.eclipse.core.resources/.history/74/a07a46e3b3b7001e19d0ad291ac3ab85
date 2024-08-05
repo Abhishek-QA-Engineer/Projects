@@ -1,0 +1,20 @@
+package javaCode;
+
+import java.util.Random;
+
+public class GenerateRandmNumStrng {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		// Approach 1 >>>by using random class in java
+		
+		Random rd= new Random();
+		
+		int randomNum=rd.nextInt(100);  // it will generate random num of type integer between range 0 to 99 ...if we give 1000 then it will generate num between 0 to 999;
+		System.out.println(randomNum);
+		
+	}
+
+}

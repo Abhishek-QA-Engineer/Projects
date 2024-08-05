@@ -1,0 +1,24 @@
+package CodePractise;
+
+ public class Abhi {
+	
+	void show()
+	{
+	   System.out.println("1");	
+	}
+
+}	
+   class Abhi extends Abhi
+   {
+	   void show()
+	   {
+		   System.out.println("2");	
+	   }
+	   
+	   public static void main(String[] args)
+	   {
+		   Abhi obj = new Abhi();
+		   obj.show();
+	   }
+   }
+

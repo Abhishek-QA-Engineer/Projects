@@ -1,0 +1,64 @@
+package seleniumPractise;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class AutomatePage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Jai Shree Ram
+		
+		WebDriver driver = new ChromeDriver();
+	
+        driver.get("https://www.way2automation.com/way2auto_jquery/registration.php#load_box");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Abhishek");
+        driver.findElement(By.xpath("//p[2]//input[@type='text']")).sendKeys("Abhi1234");
+        driver.findElement(By.xpath("//label[normalize-space()='Single']")).click();
+        driver.findElement(By.xpath("//label[normalize-space()='Dance']")).click();
+    //    driver.findElement(By.xpath("//select//option[@value='India']"));
+        
+        Select countryName= new Select(driver.findElement(By.xpath("//fieldset/select[1]")));
+        
+        countryName.selectByVisibleText("India");
+        
+        
+        Select day= new Select(driver.findElement(By.xpath("(//select)[2]")));
+        
+        day.selectByIndex(1);
+        
+        Select month= new Select(driver.findElement(By.xpath("(//select)[3]")));
+        
+        month.selectByIndex(1);
+        
+        Select year= new Select(driver.findElement(By.xpath("(//select)[4]")));
+        
+        year.selectByIndex(1);
+        
+        driver.findElement(By.xpath("(//input[@name='phone'])[1]")).sendKeys("6398256197");
+        driver.findElement(By.xpath("(//input[@name='username'])[1]")).sendKeys("Abhishek tanwar");
+        
+        driver.findElement(By.xpath("(//input[@name='email'])[1]")).sendKeys("abhishektanwar@123.com");
+        
+        driver.findElement(By.xpath("//input[@type='file']")).sendKeys("\"C:\\Users\\hp\\Downloads\\pardeepafcat.pdf\"");
+        
+        
+        
+        
+        
+        
+        
+	
+		
+
+	}
+
+}

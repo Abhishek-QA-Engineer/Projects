@@ -1,0 +1,10 @@
+package javaCode;
+
+public class GenerateRandmNumStrng {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

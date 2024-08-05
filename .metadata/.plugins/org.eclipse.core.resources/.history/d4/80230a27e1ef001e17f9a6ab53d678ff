@@ -1,0 +1,38 @@
+package seleniumPractise;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class BasicPractise {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		
+	//	ChromeDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
+	//	WebDriver driver =new EdgeDriver();
+	//	WebDriver driver = new FirefoxDriver();
+		
+//		driver.get("https://www.youtube.com/shorts/v_JN4dH713I");
+//		Thread.sleep(5000);
+//		driver.findElement(By.className("ytp-large-play-button-bg")).click();
+//		
+//		System.out.println(driver.getTitle());
+		
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.findElement(By.id("inputUsername")).sendKeys("Abhishek");
+		driver.findElement(By.name("inputPassword")).sendKeys("abhi");
+		driver.findElement(By.className("submit signInBtn")).click();
+	    
+	
+
+	}
+
+}
+

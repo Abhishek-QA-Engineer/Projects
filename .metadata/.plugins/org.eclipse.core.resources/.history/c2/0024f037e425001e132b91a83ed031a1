@@ -1,0 +1,37 @@
+package javaBasic;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+public class BasicSelenium {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		   
+//	System.setProperty("webdriver.chrome.driver","\"C:\\Users\\hp\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+	// we can keep above line as opti
+	WebDriver driver = new ChromeDriver();
+//	driver.manage().window().maximize();
+//	driver.get("http://google.com");
+	// when we are using get method then there will bw in build wait in the script so that we can see the page properly which we want to load
+	
+//	driver.navigate().to("https://rahulshettyacademy.com/locatorspractice");
+	
+	//but in navigate method , it will redirect the url even if something still remain to load on that page
+//	driver.navigate().back();
+//	driver.navigate().forward();
+	driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+	WebElement staticDropdown = driver.findElement(By.id("ct100_mainContent_DropDownListCurrency"));
+	Select dropdown = new Select(staticDropdown);
+	
+	dropdown.selectByIndex(3);
+	dropdown.getFirstSelectedOption().getText();
+	
+	
+	
+}
+
+}
